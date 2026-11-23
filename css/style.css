@@ -49,13 +49,32 @@ main, header.hero, footer {
 .hero {
   display: flex;
   gap: 28px;
-  align-items: center;
-  padding-top: 40px;
+  align-items: flex-start;
+  padding-top: 16px;
   padding-bottom: 24px;
   flex-wrap: wrap;
 }
 
+/* Banner behind the profile photo, like a LinkedIn cover */
+.cover {
+  max-width: var(--max);
+  height: 220px;
+  margin: 0 auto;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(135deg, #2f6f5e 0%, #8fc9b6 55%, #d9e8e2 100%);
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 0px) {
+  :root[data-cover-photo] .cover { background-image: var(--cover-photo); }
+}
+
 .avatar {
+  position: relative;
+  margin-top: -100px;
+  flex: none;
+  border: 5px solid var(--bg);
+  box-sizing: content-box;
   width: 200px;
   height: 200px;
   border-radius: 50%;
