@@ -6,7 +6,7 @@
   --card: #ffffff;
   --border: #e4e4e0;
   --radius: 10px;
-  --max: 760px;
+  --max: 980px;
 }
 
 @media (prefers-color-scheme: dark) {
