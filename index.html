@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Micaela Leonarte</title>
+  <meta name="description" content="Micaela Leonarte: projects, analyses and writing.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="avatar" src="assets/images/profile.jpg" alt="Micaela Leonarte" width="144" height="144">
+    <div>
+      <h1>Micaela Leonarte</h1>
+      <p class="tagline">Your role or field, in one line</p>
+      <nav class="links" aria-label="Contact and profiles">
+        <a href="https://github.com/micaela-leonarte">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+        <a href="assets/cv.pdf">CV (PDF)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        A short bio goes here: what you work on, what you are interested in, and what you are looking for.
+        Two or three sentences is enough.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <article class="entry">
+        <header>
+          <h3>Role title</h3>
+          <span class="meta">Organization · 2024 – Present</span>
+        </header>
+        <p>One or two lines on what you did and the tools you used.</p>
+      </article>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <article class="entry">
+        <header>
+          <h3>Degree, field</h3>
+          <span class="meta">University · Year</span>
+        </header>
+      </article>
+    </section>
+
+    <section id="showcase">
+      <div class="tabs" role="tablist" aria-label="Showcase">
+        <button type="button" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="true" class="tab" data-tab="projects">Projects</button>
+        <button type="button" role="tab" id="tab-highlights" aria-controls="panel-highlights" aria-selected="false" tabindex="-1" class="tab" data-tab="highlights">Highlights</button>
+      </div>
+
+      <div id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel">
+      <div class="grid">
+        <a class="card" href="https://github.com/micaela-leonarte/project-one">
+          <h3>Project one</h3>
+          <p>One-line summary of the question and the method.</p>
+          <span class="tags">Python · GIS</span>
+        </a>
+        <a class="card" href="https://github.com/micaela-leonarte/project-two">
+          <h3>Project two</h3>
+          <p>One-line summary of the question and the method.</p>
+          <span class="tags">R · Statistics</span>
+        </a>
+        <a class="card" href="https://github.com/micaela-leonarte/project-three">
+          <h3>Project three</h3>
+          <p>One-line summary of the question and the method.</p>
+          <span class="tags">Python · Machine learning</span>
+        </a>
+      </div>
+      </div>
+
+      <div id="panel-highlights" role="tabpanel" aria-labelledby="tab-highlights" class="tab-panel" hidden>
+        <article class="highlight">
+          <img src="assets/images/highlights/executive-order.jpg" alt="Micaela at the signing of an executive order" loading="lazy" width="960" height="540">
+          <div class="highlight-body">
+            <h3>Signing of an executive order</h3>
+            <p class="meta">Place · Date</p>
+            <p>A short snippet: what the event was, what your role was, and why it mattered. Two or three sentences.</p>
+          </div>
+        </article>
+
+        <article class="highlight">
+          <img src="assets/images/highlights/second-highlight.jpg" alt="Describe the photo" loading="lazy" width="960" height="540">
+          <div class="highlight-body">
+            <h3>Second highlight</h3>
+            <p class="meta">Place · Date</p>
+            <p>A short snippet about this moment, the work behind it, and what came out of it.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="posts">
+      <h2>Writing and visuals</h2>
+      <a class="post-link" href="posts/example-post/">
+        <h3>Example post: a result shown as a GIF</h3>
+        <p class="meta">Replace with your first post.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with plain HTML and hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    // Tabs: switch panels on click, and with arrow keys for keyboard users.
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+      function show(tab) {
+        tabs.forEach(function (t) {
+          var selected = t === tab;
+          t.setAttribute('aria-selected', selected ? 'true' : 'false');
+          t.tabIndex = selected ? 0 : -1;
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+        });
+        tab.focus();
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { show(t); });
+        t.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+            show(next);
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
