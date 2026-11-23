@@ -78,6 +78,8 @@ h3 { font-size: 1.05rem; margin: 0 0 4px; }
 
 .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }
 .links a, a { color: var(--accent); }
+.icon-link { display: inline-flex; align-items: center; gap: 6px; }
+.icon-link svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
 
 .achievements { padding-left: 20px; margin: 0 0 16px; }
 .achievements li { margin-bottom: 6px; }
