@@ -35,8 +35,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 main, header.hero, footer {
@@ -47,22 +48,22 @@ main, header.hero, footer {
 
 .hero {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
-  padding-top: 56px;
+  padding-top: 72px;
   padding-bottom: 24px;
   flex-wrap: wrap;
 }
 
 .avatar {
-  width: 144px;
-  height: 144px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--border);
 }
 
-h1 { font-size: 2.2rem; margin: 0 0 4px; }
+h1 { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 6px; }
 h2 {
   font-size: 1.15rem;
   text-transform: uppercase;
@@ -146,7 +147,7 @@ h3 { font-size: 1.05rem; margin: 0 0 4px; }
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: center;
-  margin: 36px 0;
+  margin: 72px 0;
 }
 .timeline .step figure { margin: 0; }
 .timeline .step figcaption { font-size: 0.75rem; color: var(--muted); opacity: 0.75; margin-top: 6px; text-align: center; }
@@ -162,8 +163,8 @@ h3 { font-size: 1.05rem; margin: 0 0 4px; }
 }
 .timeline .step-image-right figure { order: 2; }
 .timeline .step-text-only { grid-template-columns: 1fr; }
-.step-date { color: var(--accent); font-size: 0.85rem; margin: 0 0 4px; letter-spacing: 0.04em; }
-.step-text h3 { font-size: 1.2rem; }
+.step-date { color: var(--accent); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; margin: 0 0 8px; letter-spacing: 0.12em; }
+.step-text h3 { font-size: 1.35rem; font-weight: 500; line-height: 1.3; margin-bottom: 10px; }
 .step-text p { margin: 0 0 6px; }
 .bridge {
   text-align: center;
