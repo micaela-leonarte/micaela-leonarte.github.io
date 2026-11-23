@@ -79,6 +79,9 @@ h3 { font-size: 1.05rem; margin: 0 0 4px; }
 .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }
 .links a, a { color: var(--accent); }
 
+.achievements { padding-left: 20px; margin: 0 0 16px; }
+.achievements li { margin-bottom: 6px; }
+
 .entry { margin-bottom: 18px; }
 .entry header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
 .entry p { margin: 4px 0 0; }
