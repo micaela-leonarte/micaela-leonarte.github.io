@@ -61,7 +61,7 @@ main, header.hero, footer {
   height: 220px;
   margin: 0 auto;
   border-radius: 0 0 var(--radius) var(--radius);
-  background: linear-gradient(135deg, #2f6f5e 0%, #8fc9b6 55%, #d9e8e2 100%);
+  background: url('../assets/images/cover.jpg') center / cover no-repeat, #2f6f5e;
   background-size: cover;
   background-position: center;
 }
