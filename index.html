@@ -68,6 +68,7 @@
       <div class="tabs" role="tablist" aria-label="Showcase">
         <button type="button" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="true" class="tab" data-tab="projects">Projects</button>
         <button type="button" role="tab" id="tab-highlights" aria-controls="panel-highlights" aria-selected="false" tabindex="-1" class="tab" data-tab="highlights">Highlights</button>
+        <button type="button" role="tab" id="tab-timeline" aria-controls="panel-timeline" aria-selected="false" tabindex="-1" class="tab" data-tab="timeline">Timeline</button>
       </div>
 
       <div id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel">
@@ -128,6 +129,55 @@
           </div>
         </article>
       </div>
+
+      <div id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" class="tab-panel timeline" hidden>
+        <article class="step step-image-left">
+          <figure>
+            <img src="assets/images/highlights/photo-7.jpg" alt="Graduates in caps and gowns at the Harvard Kennedy School commencement" loading="lazy" width="1026" height="1200">
+          </figure>
+          <div class="step-text">
+            <p class="step-date">May 2023</p>
+            <h3>Master in Public Policy, Harvard Kennedy School</h3>
+            <p>Concentration in Local Economic Development: Social and Urban Policy. My thesis studied app-based food delivery and micro-mobility in Boston.</p>
+          </div>
+        </article>
+
+        <p class="bridge">Right after graduating, I joined the Commonwealth of Massachusetts to help the state pursue federal funding.</p>
+
+        <article class="step step-image-right">
+          <figure>
+            <img src="assets/images/highlights/photo-8.jpg" alt="The Governor signing an executive order at a desk while officials look on" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="step-text">
+            <p class="step-date">Oct 2023 – Oct 2025</p>
+            <h3>Federal Funds and Infrastructure Policy Manager</h3>
+            <p>Directed policy for the state's federal funds office and secured $8 billion across infrastructure, climate, health and equity projects. I also drafted executive orders, policy memos and legislation for the Governor's office.</p>
+          </div>
+        </article>
+
+        <p class="bridge">Within that role, I turned grant writing into a tool that other teams could use.</p>
+
+        <article class="step step-image-left">
+          <figure>
+            <img src="assets/images/highlights/photo-2.jpg" alt="Four presenters in front of the GrantWell slide at a Massachusetts event" loading="lazy" width="1200" height="940">
+          </figure>
+          <div class="step-text">
+            <p class="step-date">2025</p>
+            <h3>GrantWell: AI for grant applications</h3>
+            <p>I led the development and pilot of an AI tool that helps Massachusetts municipalities and state agencies find and draft competitive federal and state grant applications.</p>
+          </div>
+        </article>
+
+        <p class="bridge">That experience led to my current role.</p>
+
+        <article class="step step-text-only">
+          <div class="step-text">
+            <p class="step-date">Dec 2025 – Present</p>
+            <h3>External Affairs Officer, San Francisco Department of Emergency Management</h3>
+            <p>I lead strategic communications and media relations for the department's programs, manage its public information during emergencies, and track grant opportunities for its executive office.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="posts">
@@ -144,6 +194,22 @@
   </footer>
 
   <script>
+    // Timeline: reveal each step as it scrolls into view.
+    (function () {
+      document.documentElement.classList.add('js');
+      var steps = document.querySelectorAll('.timeline .step');
+      if (!('IntersectionObserver' in window)) {
+        steps.forEach(function (s) { s.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      steps.forEach(function (s) { io.observe(s); });
+    })();
+
     // Tabs: switch panels on click, and with arrow keys for keyboard users.
     (function () {
       var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
