@@ -146,9 +146,10 @@ h3 { font-size: 1.05rem; margin: 0 0 4px; }
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
   background: var(--border);
+  /* Soft top and bottom edges so each photo blends into the next line */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
 }
 .timeline .step-image-right figure { order: 2; }
 .timeline .step-text-only { grid-template-columns: 1fr; }
